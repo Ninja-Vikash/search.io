@@ -21,10 +21,10 @@ export default function Search({ query, setQuery, setResults }) {
     }
   };
   return (
-    <div className="mt-4  flex justify-center gap-4">
+    <div className="mt-4  flex justify-center gap-2">
       <input
         type="text"
-        className="w-2/4 h-12 px-4 outline-none rounded-md text-zinc-900"
+        className="xs:w-auto lg:w-2/4 h-12 px-4 outline-none rounded-md text-zinc-900"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
