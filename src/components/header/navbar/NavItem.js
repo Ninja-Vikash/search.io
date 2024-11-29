@@ -11,7 +11,7 @@ export default function NavItem({ text, link }) {
       className={`text-xs font-bold px-3 py-1 rounded ${
         isActive
           ? "bg-blue-500 text-white"
-          : "hover:bg-blue-500/50 hover:text-white"
+          : "hover:bg-blue-400/20 hover:text-white"
       }`}
     >
       {text}

@@ -37,7 +37,7 @@ export default function Search({ query, setQuery, setResults }) {
       <button
         type="submit"
         onClick={() => getResultsApi(query, "imagesearch")}
-        className="px-3 border bg-transparent border-cyan-600 font-sans rounded-md"
+        className="px-3 border bg-transparent border-zinc-600 font-sans rounded-md"
       >
         <Icon_Image />
       </button>

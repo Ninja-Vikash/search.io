@@ -9,10 +9,6 @@ export default function NavActions() {
       <a href="https://github.com/Ninja-Vikash/solution.io" target="_blank">
         <Icon_GitHub className="invert" />
       </a>
-
-      <a href="https://github.com/Ninja-Vikash/solution.io" target="_blank">
-        <Icon_GitHub className="invert" />
-      </a>
     </div>
   );
 }

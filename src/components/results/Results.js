@@ -9,7 +9,9 @@ export default function Results({ results }) {
               {result.link}
             </p>
           </a>
-          <p className="font-medium text-sm mt-2 text-zinc-300">{result.snippet}</p>
+          <p className="font-medium text-sm mt-2 text-zinc-300">
+            {result.snippet}
+          </p>
           {result.thumbnailImageUrl && (
             <img
               src={result.thumbnailImageUrl}
