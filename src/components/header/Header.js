@@ -1,11 +1,20 @@
+/**
+ * Component
+ */
 import Logo from "./Logo";
-import Search from "./Search";
+import NavBar from "./navbar";
+import NavActions from "./navbar/NavActions";
 
-export default function Header({ query, setQuery, setResults }) {
+export default function Header({ title }) {
   return (
-    <header className="xs:px-2 lg:px-32 py-6">
-      <Logo value={"Search.io"} />
-      <Search query={query} setQuery={setQuery} setResults={setResults} />
+    <header className="xs:px-2 mx-auto w-3/4 py-4 flex items-center">
+      <div className="grid grid-cols-3 w-full items-center relative">
+        <Logo value={title} />
+
+        <NavBar />
+
+        <NavActions />
+      </div>
     </header>
   );
 }

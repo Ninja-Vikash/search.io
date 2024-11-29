@@ -2,13 +2,11 @@
  * Api
  */
 import { getResults } from "@api/getResults";
-import Image from "next/image";
 
 /**
- * Material Icons
+ * Assets
  */
-import SearchIcon from "../../assets/search.svg";
-import ImageIcon from "../../assets/image.svg";
+import { Icon_Image, Icon_Search } from "@assets/icon";
 
 export default function Search({ query, setQuery, setResults }) {
   const getResultsApi = async (query, type) => {
@@ -21,26 +19,27 @@ export default function Search({ query, setQuery, setResults }) {
     }
   };
   return (
-    <div className="mt-4  flex justify-center gap-2">
+    <div className="my-4  flex justify-center gap-2">
       <input
         type="text"
         className="xs:w-auto lg:w-2/4 h-12 px-4 outline-none rounded-md text-zinc-900"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        placeholder="What is html?"
       />
       <button
         type="submit"
         onClick={() => getResultsApi(query, "search")}
         className="px-3 bg-cyan-600 font-sans rounded-md"
       >
-        <Image src={SearchIcon} alt="search" height={34} width={34} />
+        <Icon_Search />
       </button>
       <button
         type="submit"
         onClick={() => getResultsApi(query, "imagesearch")}
-        className="px-3 border border-cyan-600 font-sans rounded-md"
+        className="px-3 border bg-transparent border-cyan-600 font-sans rounded-md"
       >
-        <Image src={ImageIcon} alt="image search" height={34} width={34} />
+        <Icon_Image />
       </button>
     </div>
   );
